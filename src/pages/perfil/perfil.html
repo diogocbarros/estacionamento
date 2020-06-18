@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="{{foto}}">
+    </ion-thumbnail>
+    <h4>{{nome}}</h4>
+    <p>{{email}}</p>
+  </ion-item>
+  
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="goToExit()">
+      <ion-icon name="md-exit"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

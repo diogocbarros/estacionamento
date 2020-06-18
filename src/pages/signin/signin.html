@@ -1,0 +1,58 @@
+<ion-content>
+     <div class="logo-box bg-thime">
+        <div class="logo">
+            <img src="assets/imgs/logo.png">
+        </div>
+    </div>
+
+
+
+    <p text-center>faça o login ou cadastre-se para continuar</p>
+    
+    <div>
+        <form [formGroup]="loginForm" (submit)="login()">
+            <ion-list inset padding-bottom>
+                <ion-item>
+                    <ion-avatar item-start style="margin-bottom: 3px; margin-right: 28px;">
+                        <ion-icon name="md-mail" class="text-thime"></ion-icon>
+                    </ion-avatar>
+                    <ion-label floating>email</ion-label>
+                    <ion-input type="email" formControlName="email"></ion-input>
+                </ion-item>
+
+
+
+                <ion-item>
+                    <ion-avatar item-start style="margin-bottom: 3px; margin-right: 28px;">
+                        <ion-icon name="md-lock" class="text-thime"></ion-icon>
+                    </ion-avatar>
+                    <ion-label floating>senha</ion-label>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                </ion-item>
+            </ion-list>
+
+            <button [disabled]="!loginForm.valid" ion-button round full margin-top margin-bottom>Login</button>
+        </form>
+
+        <p class="text-thime" text-center (click)="esqueciSenha()">Esqueci minha senha</p>
+
+
+        <button ion-button round full margin-top margin-bottom (click)="signup()">Cadastrar</button>
+
+        <div>
+            <p text-center>ou continue com</p>
+
+            <button ion-button round full margin-top margin-bottom (click)="facebookLogin()">Facebook</button>
+
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer class="hide-on-keyboard-open">
+    <div class="button-bar">
+        <h5 class="h5Footer">Fazendo o cadastro, você concorda com os <a style="color: #000" href="">termos e
+                condições</a></h5>
+
+    </div>
+
+</ion-footer> 

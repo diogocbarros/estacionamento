@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Estacionamento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <ion-list no-lines>
+    <ion-item *ngFor="let item of posts" (click)="openImagem(item.foto)">
+      <ion-thumbnail item-start>
+        <img src="{{item.foto}}">
+      </ion-thumbnail>
+      <h4>{{item.observacao}}</h4>
+      <p>{{item.usuario}} - {{item.data | date: 'dd/MM/yyyy'}}</p>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="openPublicacao()">
+      <ion-icon name="md-add-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header class="bg-transparent">
+    <ion-navbar>
+        <ion-title>Cadastrar</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="loginForm" (submit)="signup()" novalidate>
+        <ion-list no-lines>
+            <ion-item>
+                <ion-avatar item-start>
+                    <ion-icon name="md-person" class="text-thime"></ion-icon>
+                </ion-avatar>
+                <ion-label floating>Nome Completo</ion-label>
+                <ion-input type="text" formControlName="nome"></ion-input>
+            </ion-item>
+
+           
+            <ion-item>
+                <ion-avatar item-start style="margin-bottom: 3px; margin-right: 28px;">
+                    <ion-icon name="md-phone-portrait" class="text-thime"></ion-icon>
+                </ion-avatar>
+                <ion-label floating>Celular</ion-label>
+                <ion-input type="number" formControlName="celular"></ion-input>
+            </ion-item>
+
+
+            <ion-item>
+                <ion-avatar item-start style="margin-bottom: 3px; margin-right: 28px;">
+                    <ion-icon name="md-mail" class="text-thime"></ion-icon>
+                </ion-avatar>
+                <ion-label floating>email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Senha</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Confirmação de Senha</ion-label>
+                <ion-input type="password" formControlName="passwordConfirmation"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button class="btn" [disabled]="!loginForm.valid" ion-button round full margin-top
+            margin-bottom>Cadastrar</button>
+    </form>
+
+
+</ion-content>
+<ion-footer class="hide-on-keyboard-open">
+    <div class="button-bar">
+        <h5 class="h5Footer">Fazendo o cadastro, você concorda com os 
+            <a style="color: #000" href="">termos e
+                condições</a>
+        </h5>
+
+    </div>
+
+</ion-footer>

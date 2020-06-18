@@ -1,0 +1,12 @@
+<ion-content padding>
+  <ion-item>
+    <ion-avatar item-start style="margin-bottom: 3px; margin-right: 28px;">
+      <ion-icon name="md-mail" class="text-thime"></ion-icon>
+    </ion-avatar>
+    <ion-label floating>email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <button [disabled]="email == undefined" ion-button round full margin-top margin-bottom (click)="enviar()">Enviar senha</button>
+
+</ion-content>

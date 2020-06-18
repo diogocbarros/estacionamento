@@ -1,0 +1,127 @@
+page-signin {
+    .logo-box {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 30px;
+        .logo {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            width: 210px;
+            height: 110px;
+            img {
+                min-width: 200px;
+                height: 180px;
+            }
+            h1 {
+                margin: 0;
+                font-size: 1.1rem;
+                letter-spacing: .5px;
+                span {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    p {
+        font-size: 1.55rem;
+        letter-spacing: .3px;
+    }
+    .form {
+        .list {
+            padding-top: 25px;
+        }
+        .social {
+            padding-top: 5px;
+            p {
+                position: relative;
+                font-weight: 300;
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 25%;
+                    height: 1px;
+                    background: #dedede;
+                    display: block;
+                    margin: auto;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 25%;
+                    height: 1px;
+                    background: #dedede;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .row {
+                margin: 0 -5px;
+                .col {
+                    .button {
+                        text-transform: none;
+                        font-size: 1.6rem;
+                        letter-spacing: .5px;
+                        font-weight: 400;
+                        letter-spacing: 0px;
+                        height: 3rem;
+                        box-shadow: none;
+                        &.btn {
+                            height: 3rem;
+                        }
+                        background:none !important;
+                        border: 1px solid #4d64ab;
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background: none !important;
+                        }
+                        &.google {
+                            border: 1px solid #f62424;
+                            color: #f62424 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fixed-bottom {
+        p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            small {
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        .fixed-bottom {
+            p {
+                small {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+
+      body.keyboard-open .has-footer{	
+        bottom: 0;
+        }       
+}
